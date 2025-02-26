@@ -1,0 +1,371 @@
+/* General Reset and Typography */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+    /* Light background */
+    color: #1f2937;
+    /* Dark text */
+}
+
+/* Header Styles */
+.admin-header {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+
+}
+
+.header-actions {
+    margin-left: auto;
+    /* This pushes the logout button to the right */
+}
+
+.admin-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    /* Left aligned by default */
+}
+
+/* Icon */
+.icon {
+    width: 20px;
+    height: 20px;
+    color: #2563eb;
+    /* Blue color for icons */
+    transition: color 0.3s ease;
+}
+
+.icon-button:hover .icon {
+    color: #1d4ed8;
+    /* Darker blue on hover */
+}
+
+.logout-button {
+    background: linear-gradient(145deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.315rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+    background-color: #1d4ed8;
+}
+
+
+.logout-button .icon {
+    width: 16px;
+    height: 16px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+
+
+.logout-button-container {
+    margin-left: auto;
+    /* This pushes the logout button to the right */
+}
+
+
+
+/* Section Header Styles */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2563eb;
+    /* Blue section title */
+}
+
+/* Button Styles */
+.new-poll-button {
+    background-color: #2563eb;
+    /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.new-poll-button:hover {
+    background-color: #1d4ed8;
+    /* Darker blue on hover */
+}
+
+/* Table Styles */
+.table-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    margin-left: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+    /* White background */
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #2563eb;
+    /* Blue border on focus */
+    outline: none;
+}
+
+.polls-table,
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+/* Actions Column */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2563eb;
+    /* Blue color for actions */
+    transition: color 0.3s ease;
+}
+
+.action-button:hover {
+    color: #1d4ed8;
+    /* Darker blue on hover */
+}
+
+.action-button.delete {
+    color: red;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.status-badge.active {
+    background-color: #d1fae5;
+    color: #16a34a;
+}
+
+.status-badge.draft {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.ended {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Results Section */
+.result-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.result-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+}
+
+.result-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.view-detailed-results {
+    background: none;
+    border: none;
+    color: #2563eb;
+    /* Blue color */
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.view-detailed-results:hover {
+    color: #1d4ed8;
+    /* Darker blue on hover */
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
+    /* Blue title */
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0.375rem;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    /* Blue border on focus */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-actions button {
+    padding: 12px 24px;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button:first-child {
+    background-color: #2563eb;
+    /* Blue button */
+    color: white;
+}
+
+.form-actions button:last-child {
+    background-color: #ddd;
+}
+
+.form-actions button:hover {
+    background-color: #1d4ed8;
+    /* Darker blue on hover */
+}
+
+.form-actions button:last-child:hover {
+    background-color: #ccc;
+}
+
+.status-badge.draft {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+.status-badge.active {
+    background-color: #5bc0de;
+    color: #fff;
+}
+
+.status-badge.completed {
+    background-color: #5cb85c;
+    color: #fff;
+}

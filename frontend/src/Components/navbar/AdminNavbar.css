@@ -1,0 +1,35 @@
+/* Tab Styles */
+.admin-tabs {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tab {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #2563eb;
+    /* Blue color */
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    color: #ffffff;
+    background-color: #2563eb;
+    /* Blue background on active tab */
+    font-weight: bold;
+}
+
+/* Content Styles */
+.admin-content {
+    padding: 20px;
+}
